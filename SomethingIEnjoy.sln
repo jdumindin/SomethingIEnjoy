@@ -4,8 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SomethingIEnjoy", "SomethingIEnjoy\SomethingIEnjoy.csproj", "{967478FA-FC52-477A-8286-8D7EF07BF938}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E4326D0C-0BAE-4035-BBCA-B0711093B4D0} = {E4326D0C-0BAE-4035-BBCA-B0711093B4D0}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{E4326D0C-0BAE-4035-BBCA-B0711093B4D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModel", "DataModel\DataModel.csproj", "{E4326D0C-0BAE-4035-BBCA-B0711093B4D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{22CC3CC0-3238-4978-863B-408D3FB72FED}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
