@@ -100,5 +100,10 @@ namespace SomethingIEnjoy.Controllers
             }
             return new JsonResult(cityCount);
         }
+        [HttpPost("Users")]
+        public async Task<IActionResult> ImportUsersAsync()
+        {
+
+        }
     }
 }

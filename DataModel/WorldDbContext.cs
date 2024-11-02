@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace DataModel;
 
-public partial class WorldDbContext : DbContext
+public partial class WorldDbContext : IdentityDbContext <AppUser>
 {
     public WorldDbContext()
     {
@@ -37,6 +38,7 @@ public partial class WorldDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<City>(entity =>
         {
             entity.HasOne(d => d.Country).WithMany(p => p.Cities)
