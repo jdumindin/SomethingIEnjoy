@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DataModel;
 using SomethingIEnjoy.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SomethingIEnjoy.Controllers
 {
@@ -30,6 +31,7 @@ namespace SomethingIEnjoy.Controllers
 
         // GET: api/Countries/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<Country>> GetCountry(int id)
         {
             var country = await _context.Countries.FindAsync(id);
